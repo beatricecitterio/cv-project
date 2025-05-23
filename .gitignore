@@ -1,1 +1,7 @@
-/data
+data
+match_analysis/models
+transfer_learning/results_phase1/model_1000_samples.pth
+transfer_learning/results_phase2/final_model.pth
+transfer_learning/results_phase3/model_densenet121.pth
+transfer_learning/results_phase3/model_mobilenet_v2.pth
+transfer_learning/results_phase3/model_resnet18.pth

@@ -1,0 +1,81 @@
+
+=== Starting Transfer Learning Pipeline with 100 labeled samples ===
+Of these, 62 have known labels and will be used for training
+
+=== Preparing Data for Training ===
+Training set: 43 images
+Validation set: 27 images
+Dataset created with 43 images and 26 classes
+Class mapping: {'arg-col': 0, 'arg-par': 1, 'aus-ger': 2, 'bra-ger': 3, 'bra-par': 4, 'chi-per': 5, 'civ-gha': 6, 'civ.gha': 7, 'cod-eqg': 8, 'cro-por': 9, 'cry-mnu': 10, 'eng-isl': 11, 'eng-rus': 12, 'eng-wal': 13, 'eqg-cgo': 14, 'fra-eng': 15, 'ger-fra': 16, 'hun-bel': 17, 'irq-uae': 18, 'isl-aut': 19, 'ita-roi': 20, 'kor-irq': 21, 'rou-alb': 22, 'svk-eng': 23, 'tot-che': 24, 'zam-cod': 25}
+Dataset created with 27 images and 26 classes
+Class mapping: {'arg-col': 0, 'arg-par': 1, 'aus-ger': 2, 'bra-ger': 3, 'bra-par': 4, 'chi-per': 5, 'civ-gha': 6, 'civ.gha': 7, 'cod-eqg': 8, 'cro-por': 9, 'cry-mnu': 10, 'eng-isl': 11, 'eng-rus': 12, 'eng-wal': 13, 'eqg-cgo': 14, 'fra-eng': 15, 'ger-fra': 16, 'hun-bel': 17, 'irq-uae': 18, 'isl-aut': 19, 'ita-roi': 20, 'kor-irq': 21, 'rou-alb': 22, 'svk-eng': 23, 'tot-che': 24, 'zam-cod': 25}
+
+=== Training Transfer Learning Model ===
+Class names: ['arg-col', 'arg-par', 'aus-ger', 'bra-ger', 'bra-par', 'chi-per', 'civ-gha', 'civ.gha', 'cod-eqg', 'cro-por', 'cry-mnu', 'eng-isl', 'eng-rus', 'eng-wal', 'eqg-cgo', 'fra-eng', 'ger-fra', 'hun-bel', 'irq-uae', 'isl-aut', 'ita-roi', 'kor-irq', 'rou-alb', 'svk-eng', 'tot-che', 'zam-cod']
+Number of classes: 26
+Using device: cuda:0
+
+Training Progress:
+----------------------------------------------------------------------
+  Epoch   |  Train Loss   |   Train Acc   |   Val Loss    |    Val Acc    
+----------------------------------------------------------------------
+    1     |    3.4843     |    0.0465     |    3.2952     |    0.1111     
+    2     |    3.1494     |    0.1628     |    3.3767     |    0.0741     
+    3     |    2.9584     |    0.2326     |    3.2888     |    0.0370     
+    4     |    2.7390     |    0.3256     |    3.0993     |    0.0741     
+    5     |    2.5800     |    0.3256     |    3.0240     |    0.0370     
+    6     |    2.5282     |    0.2558     |    2.9517     |    0.1111     
+    7     |    2.3851     |    0.2558     |    2.9340     |    0.2222     
+    8     |    2.0993     |    0.5116     |    2.9132     |    0.1481     
+    9     |    2.1186     |    0.3953     |    2.8464     |    0.1111     
+    10    |    2.1183     |    0.5349     |    2.8462     |    0.1481     
+    11    |    2.0648     |    0.5116     |    2.8369     |    0.1111     
+    12    |    2.1443     |    0.5814     |    2.8254     |    0.1481     
+    13    |    2.0584     |    0.5349     |    2.8177     |    0.1111     
+    14    |    2.0416     |    0.4884     |    2.8191     |    0.1111     
+    15    |    1.9942     |    0.5116     |    2.8105     |    0.1481     
+----------------------------------------------------------------------
+Training complete in 0m 9s
+Best val Acc: 0.2222
+Model saved as 'model_100_samples.pth'
+
+=== Performing Inference on Unlabeled Images ===
+Found 9900 unlabeled images for inference
+Average confidence on unlabeled images: 0.2074
+
+=== Extracting Samples by Confidence ===
+
+Top 20 most confident predictions:
+  54834.jpg: irq-uae (confidence: 0.8690)
+  71262.jpg: irq-uae (confidence: 0.8567)
+  89096.jpg: irq-uae (confidence: 0.8489)
+  89097.jpg: irq-uae (confidence: 0.8478)
+  15776.jpg: irq-uae (confidence: 0.8335)
+  88562.jpg: irq-uae (confidence: 0.8279)
+  77834.jpg: irq-uae (confidence: 0.8042)
+  71261.jpg: irq-uae (confidence: 0.7926)
+  19420.jpg: irq-uae (confidence: 0.7919)
+  88560.jpg: irq-uae (confidence: 0.7906)
+  47097.jpg: irq-uae (confidence: 0.7828)
+  40162.jpg: irq-uae (confidence: 0.7741)
+  32564.jpg: irq-uae (confidence: 0.7660)
+  41594.jpg: irq-uae (confidence: 0.7578)
+  87901.jpg: irq-uae (confidence: 0.7560)
+  62853.jpg: irq-uae (confidence: 0.7500)
+  47852.jpg: irq-uae (confidence: 0.7488)
+  89104.jpg: irq-uae (confidence: 0.7441)
+  18255.jpg: irq-uae (confidence: 0.7436)
+  42481.jpg: irq-uae (confidence: 0.7409)
+
+Selected 100 least confident images for labeling
+
+Saved most confident predictions to 'most_confident_100_samples.csv'
+Emptying directory: data/samples_to_label
+Emptied directory: data/samples_to_label
+Copied 100 least confident samples to 'data/samples_to_label' directory (for blind labeling)
+
+=== Process Complete ===
+Training completed with 100 labeled samples
+Best validation accuracy: 0.2222
+You can now manually label the images in 'data/samples_to_label' (blind labeling)
+Average confidence on unlabeled images: 0.2074

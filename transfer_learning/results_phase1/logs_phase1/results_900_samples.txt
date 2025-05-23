@@ -1,0 +1,82 @@
+
+=== Starting Transfer Learning Pipeline with 900 labeled samples ===
+Of these, 614 have known labels and will be used for training
+
+=== Preparing Data for Training ===
+Training set: 474 images
+Validation set: 144 images
+Dataset created with 474 images and 45 classes
+Class mapping: {'arg-col': 0, 'arg-par': 1, 'aus-ger': 2, 'bra-ger': 3, 'bra-par': 4, 'chi-per': 5, 'civ-gha': 6, 'civ.gha': 7, 'cod-eqg': 8, 'col-pol': 9, 'cri-cie': 10, 'cro-por': 11, 'cry-mnu': 12, 'egy-swe': 13, 'eng-bra': 14, 'eng-ice': 15, 'eng-isl': 16, 'eng-rus': 17, 'eng-wal': 18, 'eqg-cgo': 19, 'esp-uru': 20, 'fra-eng': 21, 'ger-fra': 22, 'ger-svk': 23, 'ger-swe': 24, 'hun-bel': 25, 'irn-irq': 26, 'irq-uae': 27, 'isl-aut': 28, 'isl-egy': 29, 'isl-hun': 30, 'ita-roi': 31, 'kor-irq': 32, 'mci-eve': 33, 'nac-liv': 34, 'per-par': 35, 'pol-fra': 36, 'rou-alb': 37, 'ste-gaz': 38, 'svk-eng': 39, 'swa-mun': 40, 'tot-che': 41, 'tun-cpv': 42, 'wal-nir': 43, 'zam-cod': 44}
+Dataset created with 144 images and 45 classes
+Class mapping: {'arg-col': 0, 'arg-par': 1, 'aus-ger': 2, 'bra-ger': 3, 'bra-par': 4, 'chi-per': 5, 'civ-gha': 6, 'civ.gha': 7, 'cod-eqg': 8, 'col-pol': 9, 'cri-cie': 10, 'cro-por': 11, 'cry-mnu': 12, 'egy-swe': 13, 'eng-bra': 14, 'eng-ice': 15, 'eng-isl': 16, 'eng-rus': 17, 'eng-wal': 18, 'eqg-cgo': 19, 'esp-uru': 20, 'fra-eng': 21, 'ger-fra': 22, 'ger-svk': 23, 'ger-swe': 24, 'hun-bel': 25, 'irn-irq': 26, 'irq-uae': 27, 'isl-aut': 28, 'isl-egy': 29, 'isl-hun': 30, 'ita-roi': 31, 'kor-irq': 32, 'mci-eve': 33, 'nac-liv': 34, 'per-par': 35, 'pol-fra': 36, 'rou-alb': 37, 'ste-gaz': 38, 'svk-eng': 39, 'swa-mun': 40, 'tot-che': 41, 'tun-cpv': 42, 'wal-nir': 43, 'zam-cod': 44}
+
+=== Training Transfer Learning Model ===
+Class names: ['arg-col', 'arg-par', 'aus-ger', 'bra-ger', 'bra-par', 'chi-per', 'civ-gha', 'civ.gha', 'cod-eqg', 'col-pol', 'cri-cie', 'cro-por', 'cry-mnu', 'egy-swe', 'eng-bra', 'eng-ice', 'eng-isl', 'eng-rus', 'eng-wal', 'eqg-cgo', 'esp-uru', 'fra-eng', 'ger-fra', 'ger-svk', 'ger-swe', 'hun-bel', 'irn-irq', 'irq-uae', 'isl-aut', 'isl-egy', 'isl-hun', 'ita-roi', 'kor-irq', 'mci-eve', 'nac-liv', 'per-par', 'pol-fra', 'rou-alb', 'ste-gaz', 'svk-eng', 'swa-mun', 'tot-che', 'tun-cpv', 'wal-nir', 'zam-cod']
+Number of classes: 45
+Using device: cuda:0
+
+Training Progress:
+----------------------------------------------------------------------
+  Epoch   |  Train Loss   |   Train Acc   |   Val Loss    |    Val Acc    
+----------------------------------------------------------------------
+    1     |    3.8700     |    0.0295     |    3.6701     |    0.0486     
+    2     |    3.4914     |    0.0865     |    3.4062     |    0.1250     
+    3     |    3.2405     |    0.1266     |    3.2589     |    0.1806     
+    4     |    2.9469     |    0.2384     |    3.0953     |    0.2292     
+    5     |    2.7803     |    0.2827     |    2.9232     |    0.2847     
+    6     |    2.6034     |    0.3397     |    2.7793     |    0.2917     
+    7     |    2.3434     |    0.4494     |    2.8130     |    0.2639     
+    8     |    2.1402     |    0.4916     |    2.5088     |    0.4028     
+    9     |    2.0706     |    0.5928     |    2.4606     |    0.4167     
+    10    |    1.9528     |    0.6646     |    2.4760     |    0.4236     
+    11    |    2.0481     |    0.5654     |    2.4580     |    0.4028     
+    12    |    2.0004     |    0.5886     |    2.4151     |    0.4375     
+    13    |    1.9770     |    0.6181     |    2.4659     |    0.4028     
+    14    |    1.9804     |    0.6160     |    2.4395     |    0.4097     
+    15    |    1.9253     |    0.6308     |    2.4288     |    0.4167     
+----------------------------------------------------------------------
+Training complete in 1m 1s
+Best val Acc: 0.4375
+Model saved as 'model_900_samples.pth'
+
+=== Performing Inference on Unlabeled Images ===
+Found 9100 unlabeled images for inference
+Average confidence on unlabeled images: 0.2637
+Adding 40 high-confidence predictions to auto-labeled set
+
+=== Extracting Samples by Confidence ===
+
+Top 20 most confident predictions:
+  88562.jpg: irq-uae (confidence: 0.9508)
+  78610.jpg: irn-irq (confidence: 0.9424)
+  77863.jpg: irn-irq (confidence: 0.9391)
+  77860.jpg: irn-irq (confidence: 0.9233)
+  98297.jpg: rou-alb (confidence: 0.9221)
+  78609.jpg: irn-irq (confidence: 0.9201)
+  77861.jpg: irn-irq (confidence: 0.9197)
+  17357.jpg: bra-ger (confidence: 0.9157)
+  42832.jpg: tun-cpv (confidence: 0.9144)
+  77844.jpg: irn-irq (confidence: 0.9143)
+  88560.jpg: irq-uae (confidence: 0.9096)
+  13573.jpg: rou-alb (confidence: 0.9090)
+  78611.jpg: irn-irq (confidence: 0.9062)
+  77864.jpg: irn-irq (confidence: 0.9039)
+  13597.jpg: rou-alb (confidence: 0.9000)
+  78184.jpg: irn-irq (confidence: 0.8994)
+  78613.jpg: irn-irq (confidence: 0.8863)
+  42030.jpg: tun-cpv (confidence: 0.8853)
+  77846.jpg: irn-irq (confidence: 0.8817)
+  43255.jpg: tun-cpv (confidence: 0.8792)
+
+Selected 100 least confident images for labeling
+
+Saved most confident predictions to 'most_confident_900_samples.csv'
+Emptying directory: data/samples_to_label
+Emptied directory: data/samples_to_label
+Copied 100 least confident samples to 'data/samples_to_label' directory (for blind labeling)
+
+=== Process Complete ===
+Training completed with 900 labeled samples
+Best validation accuracy: 0.4375
+You can now manually label the images in 'data/samples_to_label' (blind labeling)
+Average confidence on unlabeled images: 0.2637
