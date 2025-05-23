@@ -1,4 +1,4 @@
-/data/images
+data
 match_analysis/models
 transfer_learning/results_phase1/model_1000_samples.pth
 transfer_learning/results_phase2/final_model.pth
