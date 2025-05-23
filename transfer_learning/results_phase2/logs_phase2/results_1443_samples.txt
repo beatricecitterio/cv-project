@@ -1,0 +1,97 @@
+
+=== Starting Transfer Learning Pipeline with 1443 labeled samples (Including 'Unknown') ===
+
+=== Preparing Data for Training (Including 'Unknown' Labels) ===
+Training set: 1140 images
+Validation set: 303 images
+
+Training set label distribution:
+  unknown: 263 images
+  tun-cpv: 156 images
+  rou-alb: 134 images
+  irn-irq: 72 images
+  kor-irq: 54 images
+  irq-uae: 52 images
+  isl-aut: 28 images
+  tot-che: 24 images
+  aus-ger: 23 images
+  wal-nir: 21 images
+  fra-eng: 20 images
+  cry-mnu: 20 images
+  svk-eng: 20 images
+  bra-ger: 20 images
+  civ-gha: 18 images
+  arg-par: 16 images
+  zam-cod: 16 images
+  eng-isl: 16 images
+  ger-svk: 16 images
+  eqg-cgo: 14 images
+  ger-fra: 14 images
+  ita-roi: 13 images
+  eng-wal: 13 images
+  cro-por: 12 images
+  chi-per: 12 images
+  bra-par: 10 images
+  arg-col: 10 images
+  eng-ice: 10 images
+  mci-eve: 10 images
+  hun-bel: 9 images
+  cod-eqg: 8 images
+  swa-mun: 8 images
+  per-par: 8 images
+Dataset created with 1140 images and 33 classes
+Class mapping: {'arg-col': 0, 'arg-par': 1, 'aus-ger': 2, 'bra-ger': 3, 'bra-par': 4, 'chi-per': 5, 'civ-gha': 6, 'cod-eqg': 7, 'cro-por': 8, 'cry-mnu': 9, 'eng-ice': 10, 'eng-isl': 11, 'eng-wal': 12, 'eqg-cgo': 13, 'fra-eng': 14, 'ger-fra': 15, 'ger-svk': 16, 'hun-bel': 17, 'irn-irq': 18, 'irq-uae': 19, 'isl-aut': 20, 'ita-roi': 21, 'kor-irq': 22, 'mci-eve': 23, 'per-par': 24, 'rou-alb': 25, 'svk-eng': 26, 'swa-mun': 27, 'tot-che': 28, 'tun-cpv': 29, 'unknown': 30, 'wal-nir': 31, 'zam-cod': 32}
+Dataset created with 303 images and 33 classes
+Class mapping: {'arg-col': 0, 'arg-par': 1, 'aus-ger': 2, 'bra-ger': 3, 'bra-par': 4, 'chi-per': 5, 'civ-gha': 6, 'cod-eqg': 7, 'cro-por': 8, 'cry-mnu': 9, 'eng-ice': 10, 'eng-isl': 11, 'eng-wal': 12, 'eqg-cgo': 13, 'fra-eng': 14, 'ger-fra': 15, 'ger-svk': 16, 'hun-bel': 17, 'irn-irq': 18, 'irq-uae': 19, 'isl-aut': 20, 'ita-roi': 21, 'kor-irq': 22, 'mci-eve': 23, 'per-par': 24, 'rou-alb': 25, 'svk-eng': 26, 'swa-mun': 27, 'tot-che': 28, 'tun-cpv': 29, 'unknown': 30, 'wal-nir': 31, 'zam-cod': 32}
+
+=== Training Transfer Learning Model (Including 'Unknown' Class) ===
+Class names: ['arg-col', 'arg-par', 'aus-ger', 'bra-ger', 'bra-par', 'chi-per', 'civ-gha', 'cod-eqg', 'cro-por', 'cry-mnu', 'eng-ice', 'eng-isl', 'eng-wal', 'eqg-cgo', 'fra-eng', 'ger-fra', 'ger-svk', 'hun-bel', 'irn-irq', 'irq-uae', 'isl-aut', 'ita-roi', 'kor-irq', 'mci-eve', 'per-par', 'rou-alb', 'svk-eng', 'swa-mun', 'tot-che', 'tun-cpv', 'unknown', 'wal-nir', 'zam-cod']
+Number of classes (including 'unknown'): 33
+Using device: cuda:0
+
+Training Progress:
+----------------------------------------------------------------------
+  Epoch   |  Train Loss   |   Train Acc   |   Val Loss    |    Val Acc    
+----------------------------------------------------------------------
+    1     |    2.6433     |    0.3579     |    2.1281     |    0.4884     
+    2     |    2.1426     |    0.4851     |    1.8913     |    0.5281     
+    3     |    1.9404     |    0.5114     |    1.6909     |    0.5710     
+    4     |    1.8149     |    0.5386     |    1.6072     |    0.5875     
+    5     |    1.6960     |    0.5500     |    1.4277     |    0.6469     
+    6     |    1.5815     |    0.5851     |    1.4997     |    0.6403     
+    7     |    1.4880     |    0.6096     |    1.4224     |    0.6172     
+    8     |    1.3332     |    0.6263     |    1.3247     |    0.6502     
+    9     |    1.3183     |    0.6316     |    1.3203     |    0.6469     
+    10    |    1.3111     |    0.6368     |    1.3134     |    0.6502     
+    11    |    1.2599     |    0.6693     |    1.2912     |    0.6700     
+    12    |    1.2356     |    0.6737     |    1.2859     |    0.6568     
+    13    |    1.2694     |    0.6553     |    1.3103     |    0.6469     
+    14    |    1.2558     |    0.6491     |    1.3053     |    0.6502     
+    15    |    1.2582     |    0.6754     |    1.2928     |    0.6502     
+----------------------------------------------------------------------
+Training complete in 2m 30s
+Best val Acc: 0.6700
+Model saved as 'results_phase2/model_1443_samples.pth'
+
+=== Performing Inference on Unlabeled Images ===
+Found 8557 unlabeled images for inference
+Average confidence on unlabeled images: 0.4630
+Adding 837 high-confidence predictions to auto-labeled set
+
+=== Extracting Samples by Confidence ===
+
+Found 172 confident (≥ 0.85) non-'unknown' predictions.
+Emptying directory: results_phase2/most_confident_by_class
+Copied 172 confident samples to 'results_phase2/most_confident_by_class'
+Saved confident sample list to 'results_phase2/most_confident_1443_samples.csv'
+Emptying directory: results_phase2/samples_to_label
+Copied 100 least confident samples to 'results_phase2/samples_to_label'
+
+=== Including Confident Predictions in Training Set ===
+Added 172 confident samples to labeled set.
+
+=== Process Complete ===
+Best validation accuracy: 0.6700
+All results saved in 'results_phase2'
+Manually label images in: 'results_phase2/samples_to_label'
+Average confidence on unlabeled images: 0.4630

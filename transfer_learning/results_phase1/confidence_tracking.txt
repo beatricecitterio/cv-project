@@ -1,0 +1,17 @@
+Timestamp, Total Labeled, Unlabeled Images, Average Confidence
+2025-05-17 09:24:18, 100 samples, Validation accuracy: 0.2222
+2025-05-17 09:25:07, 100 samples, 9900 unlabeled, Avg confidence: 0.2074
+2025-05-18 12:49:00, 200 samples, Validation accuracy: 0.2326
+2025-05-18 12:50:02, 200 samples, 9800 unlabeled, Avg confidence: 0.1859
+2025-05-18 13:10:20, 300 samples, Validation accuracy: 0.3448
+2025-05-18 13:11:10, 300 samples, 9700 unlabeled, Avg confidence: 0.1867 # note that it makes sense that performance does not improve because the number of classes is increasing
+2025-05-19 09:53:26, 400 samples, Validation accuracy: 0.4247
+2025-05-19 09:54:19, 400 samples, 9600 unlabeled, Avg confidence: 0.1991
+2025-05-19 14:00:22, 500 samples, Validation accuracy: 0.4239
+2025-05-19 14:01:13, 500 samples, 9500 unlabeled, Avg confidence: 0.2296
+2025-05-19 16:59:23, 800 samples, Validation accuracy: 0.4511
+2025-05-19 17:00:11, 800 samples, 9200 unlabeled, Avg confidence: 0.2290
+2025-05-19 17:18:53, 900 samples, Validation accuracy: 0.4375
+2025-05-19 17:19:41, 900 samples, 9100 unlabeled, Avg confidence: 0.2637
+2025-05-19 17:37:19, 1000 samples, Validation accuracy: 0.4808
+2025-05-19 17:38:05, 1000 samples, 9000 unlabeled, Avg confidence: 0.2791
